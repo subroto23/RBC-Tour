@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anek Bangla"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet" />
+    <link href="https://fonts.maateen.me/bensen/font.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Creating Ticket</title>
+  </head>
+  <body>
+    <header>
+      <div class="flex justify-center" id="formShow">
+        <div class="border-4 p-4 shadow-2xl w-[500px]">
+          <div class="max-md:mt-8">
+            <h1 class="text-2xl font-bold text-blue-600 text-center mt-4">
+              ভ্রমণের টিকিট
+            </h1>
+          </div>
+          <form id="photoMaking">
+            <div class="max-md:my-4">
+              <label htmlFor="name"> প্রদানকারীর নামঃ </label>
+              <select
+                name="senderName"
+                id="senderName"
+                class="border-4 rounded-lg p-2 w-full"
+              >
+                <option value="" disabled="">নাম পছন্দ করুন</option>
+                <option value="চন্দন দাস">চন্দন দাস</option>
+                <option value="চন্দন দাসের পরিবার">চন্দন দাসের পরিবার</option>
+                <option value="মনোজ দাস">মনোজ দাস</option>
+                <option value="মনোজ দাসের পরিবার">মনোজ দাসের পরিবার</option>
+                <option value="মিলন দাস">মিলন দাস</option>
+                <option value="মিলন দাসের পরিবার">মিলন দাসের পরিবার</option>
+                <option value="রনোজ দাস">রনোজ দাস</option>
+                <option value="রনোজ দাসের পরিবার">রনোজ দাসের পরিবার</option>
+                <option value="সমীর দাস">সমীর দাস</option>
+                <option value="সমীর দাসের পরিবার">সমীর দাসের পরিবার</option>
+                <option value="সুজয় দাস">সুজয় দাস</option>
+                <option value="সুজয় দাসের পরিবার">সুজয় দাসের পরিবার</option>
+                <option value="রঞ্জন দাস">রঞ্জন দাস</option>
+                <option value="বিলাস দাস">বিলাস দাস</option>
+                <option value="গৌরঙ্গ রায়">গৌরঙ্গ রায়</option>
+                <option value="গৌরঙ্গ রায়ের পরিবার">গৌরঙ্গ রায়ের পরিবার</option>
+                <option value="তন্ময় দাস">তন্ময় দাস</option>
+                <option value="সিদ্ধার্থ দাস">সিদ্ধার্থ দাস</option>
+                <option value="উজ্জ্বল দাস">উজ্জ্বল দাস</option>
+                <option value="সৌরভ দাস">সৌরভ দাস</option>
+                <option value="সুব্রত দাস">সুব্রত দাস</option>
+                <option value="দীপ্ত দাস">দীপ্ত দাস</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label htmlFor="namereceive">গ্রহণকারীর নামঃ</label>
+              <select
+                name="namereceive"
+                id="tkreceiver"
+                class="border-4 rounded-lg p-2 w-full"
+              >
+                <option value="" disabled="">নাম পছন্দ করুন</option>
+                <option value="সমীর দাস">সমীর দাস</option>
+                <option value="সুব্রত দাস">সুব্রত দাস</option>
+                <option value="সৌরভ দাস">সৌরভ দাস</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label htmlFor="amountOfSendingMoney">
+                ধার্যকৃত অর্থের পরিমাণঃ
+              </label>
+              <input
+                class="border-4 rounded-lg p-2 w-full"
+                type="number"
+                name="selectAmount"
+                id="SelectAmountInput"
+                placeholder="অর্থের পরিমাণ লিখুন"
+              />
+            </div>
+            <div class="mb-4">
+              <label htmlFor="amountOfSendingMoney">
+                প্রদানকৃত অর্থের পরিমাণঃ
+              </label>
+              <input
+                class="border-4 rounded-lg p-2 w-full"
+                type="number"
+                id="receiveAmountInput"
+                placeholder="অর্থের পরিমাণ লিখুন"
+              />
+            </div>
+            <div class="mb-4">
+              <label htmlFor="amountOfSendingMoney">
+                পূর্বে প্রদানকৃত অর্থের পরিমাণ যদি থাকেঃ-
+              </label>
+              <input
+                class="border-4 rounded-lg p-2 w-full"
+                type="number"
+                id="previousAmountInput"
+                placeholder="অর্থের পরিমাণ লিখুন"
+              />
+            </div>
+            <div class="flex justify-center">
+              <input
+                onClick="duesValueCalculation()"
+                type="submit"
+                value="ছবি তৈরি করুন"
+                class="border-4 p-2 block bg-blue-600 text-white hover:bg-orange-600 rounded-xl w-full"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="w-[900px] mt-8 mx-auto" id="displayImg">
+      <div
+        class="w-[900px] h-[336px] bg-white border rounded-3xl flex justify-between shadow-2xl relative"
+      >
+        <div
+          class="w-96 border-r-4 border-dashed flex flex-col justify-between"
+        >
+          <div
+            class="bg-sky-500 h-16 rounded-tl-3xl flex items-center justify-center"
+          >
+            <h4 class="text-white">ভ্রমণকারীর বিবারণ</h4>
+          </div>
+          <div class="bg-sky-100 h-[250px] pt-5">
+            <div class="flex flex-col justify-between -mt-10">
+              <div class="flex flex-col items-center mb-2">
+                <h3 class="text-orange-600 font-semibold">অর্থ প্রদানকারীঃ-</h3>
+                <strong class="text-gray-400 py-1 px-2" id="adminSenderName">
+                </strong>
+              </div>
+              <div class="flex flex-col items-center mb-2">
+                <h3 class="text-yellow-800 font-semibold">অর্থ গ্রহণকারীঃ-</h3>
+                <strong class="text-gray-400 py-1 px-2" id="receiverName">
+                </strong>
+              </div>
+              <div class="flex flex-col items-center">
+                <h3 class="text-sky-600 font-semibold">প্রদানকৃত অর্থঃ</h3>
+                <strong
+                  class="font-bolder text-xl text-gray-400 p-1"
+                  id="receiveAmount"
+                >
+                </strong>
+              </div>
+              <div class="flex flex-col items-center">
+                <h3 class="text-green-600 font-semibold">বকেয়ার পরিমাণঃ</h3>
+                <strong
+                  class="font-bolder text-xl text-red-600 p-1"
+                  id="dueAmountAdmin"
+                >
+                </strong>
+              </div>
+            </div>
+          </div>
+          <div class="bg-sky-500 h-6 rounded-bl-3xl w-full"></div>
+        </div>
+        <div class="w-full flex justify-between flex-col">
+          <div>
+            <div class="bg-sky-500 h-16 rounded-tr-3xl">
+              <div
+                class="grid grid-flow-col grid-cols-3 items-center h-16 px-5"
+              >
+                <div class="">
+                  <img
+                    width="100px"
+                    height="100px"
+                    src="./images/car.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="">
+                  <h3 class="text-white text-center">রূপসী বাংলা ক্লাব</h3>
+                </div>
+                <div>
+                  <h4 class="text-white text-center">আনন্দ ভ্রমণ</h4>
+                </div>
+                <div class="col-span-2">
+                  <h4 class="text-white text-center">টিকিট</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid grid-flow-col grid-cols-3 px-5 gap-4">
+              <div class="flex flex-col justify-around gap-6">
+                <div class="flex flex-col items-center">
+                  <h3 class="text-orange-600 font-semibold">ভ্রমণকারীর নামঃ</h3>
+                  <strong class="text-gray-400 py-1 px-2" id="travellarName">
+                  </strong>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-sky-600 font-semibold">ভ্রমণের স্থানঃ</h3>
+                  <strong>ড্রীম ভ্যালী</strong>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-green-600 font-semibold">সময়ঃ</h3>
+                  <strong>সকালঃ ৭ টা</strong>
+                </div>
+              </div>
+              <div class="flex flex-col justify-around gap-6">
+                <div class="flex flex-col items-center">
+                  <h3 class="text-orange-600 font-semibold">গাড়ীর ধরণঃ</h3>
+                  <strong>মাইক্রোবাস</strong>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-sky-600 font-semibold">সিটের বিবারণঃ</h3>
+                  <strong id="sitPosition"></strong>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-green-600 font-semibold">ভ্রমণের তারিখঃ</h3>
+                  <strong>১৮/০৮/২০২৩ ইং</strong>
+                </div>
+              </div>
+              <div class="flex flex-col justify-around gap-6">
+                <div class="flex flex-col items-center">
+                  <h3 class="text-orange-600 font-semibold">ধার্যকৃত অর্থ</h3>
+                  <strong id="selectedAmount"></strong>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-sky-600 font-semibold">প্রদানকৃত অর্থঃ</h3>
+                  <strong
+                    class="font-bolder text-xl text-gray-400 p-1"
+                    id="receiveAmountUser"
+                  >
+                  </strong>
+                </div>
+                <div class="flex flex-col items-center">
+                  <h3 class="text-green-600 font-semibold">বকেয়ার পরিমাণঃ</h3>
+                  <strong
+                    class="font-bolder text-xl text-red-600 p-1"
+                    id="dueAmount"
+                  >
+                  </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-sky-500 h-6 rounded-br-3xl w-full"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script src="./index.js"></script>
+</html>
