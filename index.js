@@ -62,23 +62,6 @@ const receiveAmountInput = document
     receiveAmount.innerHTML = e.target.value;
     receiveAmountUser.innerHTML = e.target.value;
   });
-
-//Photo Making
-const photoMaking = document
-  .getElementById("photoMaking")
-  .addEventListener("submit", (e) => {
-    e.preventDefault();
-    downloadimage();
-    
-    //Hide And Display
-    const displayImg = document.getElementById("displayImg");
-    displayImg.style.display = "block";
-
-    //Form Hide Show
-    const formShow = document.getElementById("formShow");
-    formShow.style.display = "none";
-  });
-
 //Due Amount Calculation
 function duesValueCalculation() {
   //Due Amount
@@ -97,3 +80,18 @@ function duesValueCalculation() {
   dueAmount.innerHTML = due;
   dueAmountAdmin.innerHTML = due;
 }
+//Photo Making
+const photoMaking = document
+  .getElementById("photoMaking")
+  .addEventListener("submit", (e) => {
+    e.preventDefault();
+    downloadimage();
+
+    //Hide And Display
+    const displayImg = document.getElementById("displayImg");
+    displayImg.style.display = "block";
+
+    //Form Hide Show
+    const formShow = document.getElementById("formShow");
+    formShow.style.display = "none";
+  });
